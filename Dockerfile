@@ -199,4 +199,6 @@ ARG BUILD_HASH
 ENV WEBUI_BUILD_VERSION=${BUILD_HASH}
 ENV DOCKER=true
 
-CMD [ "bash", "start.sh"]
+ENV PORT=${PORT}
+EXPOSE ${PORT}
+CMD ["open-webui", "serve", "--port", "${PORT}"]

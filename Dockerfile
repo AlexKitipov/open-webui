@@ -201,4 +201,5 @@ ENV DOCKER=true
 
 ENV PORT=${PORT}
 EXPOSE ${PORT}
-CMD ["open-webui", "serve", "--port", "${PORT}"]
+
+CMD ["bash", "start.sh"]
